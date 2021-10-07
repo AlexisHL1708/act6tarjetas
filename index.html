@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+    <title>Generador de Tarjetas</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1>Tarjetas para ti</h1>
+    </header>
+    <section class="contenido">
+        <article>
+
+            <h1 class="tit"> Elige un estilo de tarjeta</h1>
+
+            <select id="tipo">
+                <option value="0">Esilo</option>
+                <option value="cumple">Tarjeta de navidad</option>
+                <option value="halloween">Tarjeta de dia de la independencia</option>
+                <option value="amor">Tarjeta de dia del programador</option>
+            </select><br><br>
+
+            <h1 class="tit">Color de relleno<input type="color" id="fondo"></h1>
+            <br>
+
+            <h1 class="tit">Selecciona la imagen de tu agrado</h1>
+
+            <div id="cumple" name="tarimag" class="contenedorImg">
+                <input class="ima" type="image" id="image" alt="" src="img/navi1.jpg" onclick="imgTarjeta('navi1')">
+                <input class="ima" type="image" id="image" alt="" src="img/navi2.jpg" onclick="imgTarjeta('navi2')">
+                <input class="ima" type="image" id="image" alt="" src="img/navi3.jpg" onclick="imgTarjeta('navi3')">
+            </div>
+            <div id="halloween" name="tarimag" class="contenedorImg">
+
+                <input class="ima" type="image" id="image" alt="" src="img/inde1.jpg" onclick="imgTarjeta('inde1')">
+                <input class="ima" type="image" id="image" alt="" src="img/inde2.jpg" onclick="imgTarjeta('inde2')">
+                <input class="ima" type="image" id="image" alt="" src="img/inde3.jpg" onclick="imgTarjeta('inde3')">
+            </div>
+
+            <div id="amor" name="tarimag" class="contenedorImg">
+
+                <input class="ima" type="image" id="image" alt="" src="img/pro1.jpg" onclick="imgTarjeta('pro1')">
+                <input class="ima" type="image" id="image" alt="" src="img/pro2.jpg" onclick="imgTarjeta('pro2')">
+                <input class="ima" type="image" id="image" alt="" src="img/pro3.jpg" onclick="imgTarjeta('pro3')">
+            </div><br><br>
+
+            <h1 class="tit">Escriba los datos</h1>
+
+            <input type="text" placeholder="Nombre de la persona" id="nombre_envia" style="width: 15rem;"
+                oninput="nombreEnvia()"><input type="color" id="color_nombre_envía" oninput="nombreEnvia()"><br><br>
+            <input type="text" placeholder="Escribe el saludo" id="saludo" style="width: 15rem;"
+                oninput="saludoTexto()"><input type="color" id="color_saludo" oninput="saludoTexto()"><br><br>
+            <form>
+                <textarea name="cuerpo_tex" id="cuerpo_tex" cols="50" rows="8" placeholder="Escribe el mensaje"
+                    oninput="cuerpoTexto()"></textarea>
+                <input type="color" id="color_cuerpo_tex" oninput="cuerpoTexto()">
+            </form>
+
+            <h3>Vista Previa</h3>
+            <div id="VistaPrevia" class="VistaPrevia">
+                <div>
+                    <div id="nombre_caja">
+                        <p id="nombre_envia_texto"></p>
+                    </div>
+                    <div id="saludo_caja">
+                        <p id="saludo_texto"></p>
+                    </div>
+                    <div id="cuerpo_caja">
+                        <p id="cuerpo_texto"></p>
+                    </div>
+                    <div id="Vista_imagen">
+                        <img src="media/fondo.png" alt="" id="Vista_Previa"
+                            style="width: 800px; height: 530px; margin: 47px 10px;">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>¿Desea finalizar la edición?</h2>
+                <a id="mostrar_tarjeta">Aceptar</a>
+            </div>
+        </article>
+    </section>
+    <script src="js/Script.js"></script>
+    <footer>
+        <h2>Encantados por tu visita!</h2>
+    </footer>
+</body>
+
+</html>
